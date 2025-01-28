@@ -1,18 +1,22 @@
-import logo from "./loop-black.svg";
-import "./App.css";
-import Annotator from "./Annotator";
+import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { Toaster } from 'react-hot-toast';
+import Annotator from './Components/Annotator/Annotator';
+
+const theme = createTheme({
+  palette: {
+    background: {
+      default: '#f5f5f5'
+    }
+  }
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload (and delete me )
-        </p>
-        <Annotator />
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Annotator />
+      <Toaster position="bottom-right" />
+    </ThemeProvider>
   );
 }
 
