@@ -40,7 +40,8 @@ Run the following commands to get started.
 
 ```
 yarn install
-NODE_OPTIONS=--openssl-legacy-provider yarn start
+$env:NODE_OPTIONS="--openssl-legacy-provider"
+yarn start
 ```
 
 Then visit [http://localhost:3000](http://localhost:3000)
