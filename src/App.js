@@ -1,6 +1,6 @@
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import { Toaster } from 'react-hot-toast';
-import Annotator from './Components/Annotator/Annotator';
+import Annotator from './Annotator';
 
 const theme = createTheme({
   palette: {
